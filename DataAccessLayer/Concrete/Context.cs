@@ -14,7 +14,7 @@ namespace DataAccessLayer.Concrete
         //OnConfiguring metodunun içinde bağlantı stringimizi tanımlıyoruz
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server = DESKTOP-Q3DTBEF; database = CoreBlogDb; integrated security = true;");
+            optionsBuilder.UseSqlServer("server = DESKTOP-Q3DTBEF; database = CoreBlogDb; integrated security = true; TrustServerCertificate=True");
         }
 
         public DbSet<About> Abouts { get; set; }
